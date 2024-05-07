@@ -1,5 +1,4 @@
-# Escreva um algoritmo para ler a quantidade em kg de morangos e a quantidade em kg de maçâs adquiridos
-# Escreva o valor a ser pago
+# Escrever um algoritmo que mostre os números ímpares entre 1 e 20.
 
 import os
 os.system("cls || clear")
@@ -11,5 +10,5 @@ i: int
 # Exibindo a tabuada
 os.system("cls || clear") 
 for i in range(1, 20):
-    print(f"{i}")
-    i=i+2
+    if i%2 !=0:
+        print(f"{i}")
