@@ -20,7 +20,7 @@ contaImpar=0
 contaNulo=0
 
 for i in range(1, 6):
-    numero=int(input(f"Digite o {i}º número - inteiro diferente de zero, de 5: "))
+    numero=int(input(f"Digite o {i}º número de 5 - inteiro diferente de zero: "))
     # Testando se o número é par ou impar e incrementando o contador correspondente
     if numero==0:
         contaNulo=contaNulo+1
