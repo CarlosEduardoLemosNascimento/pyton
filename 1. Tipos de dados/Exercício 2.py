@@ -1,6 +1,6 @@
 # Elabore um algoritmo para ler o nome de um aluno, sua idade e 2 notas.
-# Calcular a média aritmética do alluno
-#mostrar nome, idade, notas e média
+# Calcular a média aritmética do aluno
+# Mostrar nome, idade, notas e média
 import os
 
 os.system("cls || clear")
