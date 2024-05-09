@@ -37,10 +37,14 @@ while True:
             input("Digite qualquer tecla para continuar... ")
             os.system("cls || clear")
     elif resposta == "N":
-        media=soma/contadorNotas
-        print(f"A média aritmética das notas informadas é: {media:.2f}")
-        input("Digite qualquer tecla para continuar... ")
-        os.system("cls || clear")
+        if contadorNotas == 0:
+            input("Não foram inseridas notas. Digite qualquer tecla para continuar... ")
+            os.system("cls || clear")
+        else:
+            media=soma/contadorNotas
+            print(f"A média aritmética das notas informadas é: {media:.2f}")
+            input("Digite qualquer tecla para continuar... ")
+            os.system("cls || clear")
     elif resposta == "Z":
         media=0
         soma=0
