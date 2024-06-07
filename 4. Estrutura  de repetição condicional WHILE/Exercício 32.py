@@ -9,11 +9,11 @@ os.system("cls || clear")
 
 def exibir_menu():
     os.system("cls || clear")
-    
+    print('\033[1;30;43m\u2573\u2573\u2573\u2573\u2573\u2573\u2573\u2573   M E N U  \u2573\u2573\u2573\u2573\u2573\u2573\u2573\u2573\033[m')
    
-    print("\u2573\u2573\u2573\u2573\u2573\u2573\u2573\u2573   M E N U  \u2573\u2573\u2573\u2573\u2573\u2573\u2573\u2573")
+    #print("\u2573\u2573\u2573\u2573\u2573\u2573\u2573\u2573   M E N U  \u2573\u2573\u2573\u2573\u2573\u2573\u2573\u2573")
     print("\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501")
-    print("\u2551\u2551 OPÇÂO \u2551\u2551   DESCRIÇÃO   \u2551\u2551")
+    print("\u2551\u2551 \033[0;30;33mOPÇÂO\033[m \u2551\u2551   \033[0;30;33mDESCRIÇÃO\033[m   \u2551\u2551")
     print("\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501\u2501")
     print("\u2551\u2551   1   \u2551\u2551 INSERIR NOTAS \u2551\u2551")
     print("\u2551\u2551   2   \u2551\u2551 EXIBIR MÉDIA  \u2551\u2551")
@@ -25,6 +25,8 @@ valores = []
 soma = 0
 media = 0
 quantidade = 0
+
+
 
 while True:
     
@@ -53,8 +55,8 @@ while True:
             exibir_menu()
 
             if quantidade == 0:
-                input("Não foram digitados valores. Pressione qualquer tecla para retornar ao menu.")
-            
+                input("\033[0;30;31mNão foram digitados valores. Pressione qualquer tecla para retornar ao menu.\033[m")
+                           
             else:
                 print("=== Mostrando resultados ===\n")
                 print(f"Média aritimética dos valores digitados: {media:.2f}")
@@ -67,12 +69,12 @@ while True:
             media = 0
             quantidade = 0
             exibir_menu()
-            input("Dados apagados com sucesso! Pressione qualquer tecla para continuar...")
+            input("\033[0;30;32mDados apagados com sucesso! Pressione qualquer tecla para continuar...\033[m")
                         
         case 4:
             break
                     
         case _:
             exibir_menu()
-            print("Opção inválida. Pressione qualquer tecla para continuar... ")
-            input()
+            input("\033[0;30;31mOpção inválida. Pressione qualquer tecla para continuar...\033[m")
+            
