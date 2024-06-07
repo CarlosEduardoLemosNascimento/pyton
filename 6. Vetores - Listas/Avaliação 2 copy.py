@@ -27,6 +27,10 @@ precos = [10,20,30,40,50,60,70]
 produtos = ["Código 1 - Produto 01","Código 2 - Produto 02","Código 3 - Produto 03","Código 4 - Produto 04","Código 5 - Produto 05","Código 6 - Produto 06","Código 7 - Produto 07"]
 pedido = []
 valor_do_consumo = 0
+desconto_acrescimo: str
+forma_de_pagamento: str
+opcao_de_pagamento: int
+valor_final: float
 
 while True:
     exibir_cardapio()
@@ -37,18 +41,19 @@ while True:
             print("\nDigite a forma de pagamento: ")
             opcao_de_pagamento = input("Digite 1 para 'À vista' ou 2 para 'Cartão'. ")
 
-            if opcao_de_pagamento == 1:
-                forma_de_pagamento = "À vista"
-                valor_final = valor_do_consumo * 0.9
-                desconto_acrescimo = "Desconto de 10%"
+            match (opcao_de_pagamento):
+                case "1":
+                    forma_de_pagamento: str = "À vista"
+                    valor_final = valor_do_consumo * 0.9
+                    desconto_acrescimo: str = "Desconto de 10%"
 
-            if opcao_de_pagamento == 2:
-                forma_de_pagamento = "Cartão de crédito / débito"
-                valor_final = valor_do_consumo * 1.1
-                desconto_acrescimo = "Acrescimo de 10%"
+                case "2":
+                    forma_de_pagamento: str = "Cartão de crédito / débito"
+                    valor_final = valor_do_consumo * 1.1
+                    desconto_acrescimo: str = "Acrescimo de 10%"
 
-            if opcao_de_pagamento != 1 and opcao_de_pagamento != 2:
-                input("Opção inválida.Digite qualquer tecla para tentar novamente.")
+                case _:
+                    input("Opção inválida. Pressione qualquer tecla para continuar...")
 
             os.system("cls || clear")
             print("\033[1;33m\t\tCOMANDA\033[m\n")
