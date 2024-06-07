@@ -13,7 +13,8 @@ def exibir_cardapio():
     print("7 - Código do Prato 7: Nome do Prato 7 - R$40.00")
 
 # Lista para armazenar o pedido do usuário
-pedido = []
+prato = []
+valor = []
 
 while True:
     exibir_cardapio()
@@ -24,7 +25,7 @@ while True:
 
     if codigo in cardapio:
         pedido.append(cardapio[codigo])
-        print(f"{cardapio[codigo][0]} adicionado ao pedido.")
+        print(f"{cardapio[codigo][0]} adicionado ao pedido.\n")
         print(f"{cardapio[codigo][0]} adicionado ao pedido.")
     else:
         print("Código inválido. Tente novamente.")
